@@ -1,0 +1,20 @@
+-- show databases;
+use class3;
+show tables;
+desc student;
+-- 修改表结构
+-- 1.添加列：alter table 表名 add 列名 类型(长度)
+	-- #为student表添加一个新的字段为：jocker 类型为char(20)
+alter table student add jocker char(10);
+
+-- 2.修改列名和类型：alter table 表名 change 旧列名 新列名 类型(长度) [约束]
+	-- 为student表dept 字段更换为deprtment varchar(30);
+	alter table student change deotartment deptartment varchar(30);
+
+-- 3.修改表删除列:alter table 表名 drop 列名;
+	-- #删除student表中department这列
+	alter table student drop deptartment;
+	
+	-- 4.修改表名：rename table 表名 to 新表名;
+		-- 将student表的名字改为stu
+		rename table student to stu;
